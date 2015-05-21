@@ -29,8 +29,9 @@ rate = re.compile('Data Rate: [0-9]*\.[0-9]')
 dataRate = re.compile('[0-9]+ bytes on wire')
 
 allQoS = qosData.findall(contents)
-allRates = rate.findall(" ".join(allQoS))
-allData = dataRate.findall(" ".join(allQoS))
+joinedAllQoS = " ".join(allQoS)
+allRates = rate.findall(joinedAllQoS)
+allData = dataRate.findall(joinedAllQoS)
 
 l =[]
 p = []

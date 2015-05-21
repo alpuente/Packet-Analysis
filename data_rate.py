@@ -1,4 +1,3 @@
-
 """ 
 File for parsing total data transmitted 
 in data packets.
@@ -25,10 +24,13 @@ else:
    f = open(name, 'r')
 
 contents = f.read()
+qosData = re.compile('QoS Data.{,}IEEE', re.DOTALL)
 rate = re.compile('Data Rate: [0-9]*\.[0-9]')
 dataRate = re.compile('[0-9]+ bytes on wire')
-allRates = rate.findall(contents)
-allData = dataRate.findall(contents)
+
+allQoS = qosData.findall(contents)
+allRates = rate.findall(" ".join(allQoS))
+allData = dataRate.findall(" ".join(allQoS))
 
 l =[]
 p = []

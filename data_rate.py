@@ -6,11 +6,11 @@ NOTE: This code is a very early version,
 and as such is not currently refined.
 This will only work when fed a text file 
 with all the information present. If extra
-packets not meant to be included are in the
-text file, they will currently also be in the
-data set. If exporting from wireshark, make
-sure that both the Frame and Radiotap Header
-are expanded
+packets with MAC addresses that you do not 
+want are in the text file, they will currently 
+also be in the data set. If exporting from 
+wireshark, make sure that both the Frame 
+and Radiotap Header are expanded
 """
 import os
 import re

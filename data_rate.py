@@ -56,4 +56,4 @@ for x in range(len(allRates)):
 print "Total data transmitted (MB): " + str(sum(p)/(1024*1024))
 
 print "Average data rate (Mb/s): " + str(sum(l)/float(len(l)))
- 
+

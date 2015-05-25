@@ -16,6 +16,8 @@ import os
 import re
 import sys
 
+# You can input the file through command-line args
+# Or you can just type it in
 if len(sys.argv) > 1:
    f = open(sys.argv[1])
 else:

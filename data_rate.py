@@ -41,6 +41,6 @@ for j in range(0,len(allData)):
     p.append(int(data[3]))
 
 print(str(sum(p)))
-print "Total data transmitted (MB): " + str((sum(p)/1000))
-print "Average data rate (Mb/s): " + str(((sum(p))/(1000))/(m[-1]-m[0]))
+print "Total data transmitted (MB): " + str((sum(p)/1024*1024))
+print "Average data rate (Mb/s): " + str(((sum(p))/(1024*1024))/(m[-1]-m[0]))
 print "Time taken: " + str(m[-1]-m[0])
